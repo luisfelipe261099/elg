@@ -133,14 +133,32 @@
   /* prédio envolto em tela — SVG */
   .tower-stage{position:relative;display:flex;justify-content:center;align-items:flex-end;min-height:440px}
   .tower-svg{width:100%;max-width:340px;filter:drop-shadow(0 30px 60px rgba(0,0,0,.5))}
-  .scaffold{animation:sway 7s ease-in-out infinite;transform-origin:top center}
+  /* a tela balança (sway) e se "instala" de baixo pra cima em loop (netrise) */
+  .scaffold{animation:sway 7s ease-in-out infinite, netrise 5.5s ease-in-out infinite;transform-origin:top center}
   @keyframes sway{0%,100%{transform:skewX(0deg)}50%{transform:skewX(.5deg) translateY(2px)}}
-  /* régua de altura */
+  @keyframes netrise{
+    0%{clip-path:inset(100% 0 0 0);opacity:0}
+    10%{clip-path:inset(88% 0 0 0);opacity:.95}
+    55%{clip-path:inset(0 0 0 0);opacity:.95}
+    90%{clip-path:inset(0 0 0 0);opacity:.95}
+    100%{clip-path:inset(0 0 0 0);opacity:0}
+  }
+  /* régua de altura — andares acendem em sequência (térreo → topo) junto com a tela */
   .floors{position:absolute;left:-6px;top:6%;bottom:8%;display:flex;flex-direction:column;justify-content:space-between;z-index:4}
-  .floors .fl{font-family:'JetBrains Mono';font-size:.6rem;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:8px;letter-spacing:.05em}
-  .floors .fl::before{content:"";width:14px;height:1px;background:rgba(255,255,255,.25)}
+  .floors .fl{font-family:'JetBrains Mono';font-size:.6rem;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:8px;letter-spacing:.05em;animation:floorlit 5.5s ease-in-out infinite both}
+  .floors .fl::before{content:"";width:14px;height:1px;background:currentColor;opacity:.7}
   .floors .fl.on{color:var(--laranja)}
-  .floors .fl.on::before{background:var(--laranja);width:22px}
+  .floors .fl.on::before{background:currentColor;width:22px;opacity:1}
+  .floors .fl:nth-child(1){animation-delay:1.5s}
+  .floors .fl:nth-child(2){animation-delay:1.15s}
+  .floors .fl:nth-child(3){animation-delay:.8s}
+  .floors .fl:nth-child(4){animation-delay:.45s}
+  .floors .fl:nth-child(5){animation-delay:.1s}
+  @keyframes floorlit{
+    0%,12%{color:rgba(255,255,255,.4)}
+    22%,88%{color:var(--laranja)}
+    100%{color:rgba(255,255,255,.4)}
+  }
 
   /* ---------- FAIXA SPECS ---------- */
   .specs{background:var(--roxo-900);border-block:1px solid rgba(255,255,255,.07)}
