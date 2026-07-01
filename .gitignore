@@ -1,0 +1,16 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Dependências (caso evolua para build no futuro)
+node_modules/
+dist/
+
+# Deploy
+.netlify/
+.vercel/

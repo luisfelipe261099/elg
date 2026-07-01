@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ELG Telas Fachadeiras · Segurança para obras verticais em Curitiba</title>
+<meta name="description" content="Instalação e manutenção de telas fachadeiras para obras verticais em Curitiba e região. Proteção coletiva conforme NR-18, equipe certificada para trabalho em altura. Peça seu orçamento." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+<!-- Open Graph / WhatsApp / Facebook / LinkedIn -->
+<!-- ⚠️ Se publicar primeiro no github.io, troque as 2 URLs absolutas abaixo (og:url e og:image) pelo endereço atual -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ELG Telas Fachadeiras" />
+<meta property="og:title" content="ELG Telas Fachadeiras · Segurança para obras verticais" />
+<meta property="og:description" content="Telas fachadeiras para obras verticais em Curitiba. Proteção coletiva NR-18, equipe certificada para trabalho em altura. Peça seu orçamento no WhatsApp." />
+<meta property="og:url" content="https://elgtelasfachadeira.com.br/" />
+<meta property="og:image" content="https://elgtelasfachadeira.com.br/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="pt_BR" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ELG Telas Fachadeiras · Segurança para obras verticais" />
+<meta name="twitter:description" content="Telas fachadeiras para obras verticais em Curitiba. Proteção coletiva NR-18. Peça seu orçamento no WhatsApp." />
+<meta name="twitter:image" content="https://elgtelasfachadeira.com.br/assets/og-image.png" />
+<meta name="theme-color" content="#4D2378" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --abismo:#140A24;
+    --roxo-900:#23103B;
+    --roxo-700:#4D2378;
+    --roxo-500:#8B3FB0;
+    --magenta:#B5479A;
+    --laranja:#FF7A1A;
+    --dourado:#FFB02E;
+    --concreto:#ECEAE6;
+    --concreto-esc:#DAD6CF;
+    --tinta:#17121F;
+    --tela:rgba(255,255,255,.9);
+    --grad:linear-gradient(118deg,#4D2378 0%,#8B3FB0 38%,#FF7A1A 92%);
+    --grad-soft:linear-gradient(118deg,#5B2A86,#FF7A1A);
+    --ease:cubic-bezier(.2,.7,.2,1);
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Manrope',system-ui,sans-serif;
+    background:var(--abismo);
+    color:var(--tinta);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:'Archivo Expanded','Archivo',sans-serif;line-height:.96;letter-spacing:-.01em}
+  .mono{font-family:'JetBrains Mono',monospace}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* malha da tela fachadeira — assinatura */
+  .mesh{
+    background-image:
+      repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 11px),
+      repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 1px,transparent 1px 11px);
+  }
+
+  /* ---------- BOTÕES ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-weight:800;font-size:.96rem;letter-spacing:.01em;
+    padding:15px 24px;border-radius:2px;border:0;cursor:pointer;
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s;
+    will-change:transform;
+  }
+  .btn-zap{background:var(--laranja);color:#1a0e00;box-shadow:0 8px 30px -8px rgba(255,122,26,.6)}
+  .btn-zap:hover{transform:translateY(-3px);box-shadow:0 14px 38px -8px rgba(255,122,26,.75)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.32)}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+  .btn-dark{background:var(--tinta);color:#fff}
+  .btn-dark:hover{transform:translateY(-3px)}
+
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;font-size:.74rem;font-weight:700;
+    letter-spacing:.22em;text-transform:uppercase;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(20,10,36,.72);backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand-mark{width:38px;height:38px;flex:none}
+  .brand-txt{display:flex;flex-direction:column;line-height:1}
+  .brand-txt b{font-family:'Archivo Expanded';color:#fff;font-size:1.18rem;font-weight:900;letter-spacing:.02em}
+  .brand-txt span{font-family:'JetBrains Mono';color:var(--laranja);font-size:.56rem;letter-spacing:.28em;margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{color:rgba(255,255,255,.72);font-weight:600;font-size:.92rem;transition:color .2s}
+  .nav-links a:hover{color:#fff}
+  .nav .btn{padding:11px 18px;font-size:.85rem}
+  .burger{display:none;background:none;border:0;cursor:pointer;width:30px;height:30px}
+  .burger span{display:block;height:2px;background:#fff;margin:6px 0;transition:.3s}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;background:
+      radial-gradient(120% 80% at 75% 0%,rgba(139,63,176,.45),transparent 55%),
+      radial-gradient(90% 70% at 90% 30%,rgba(255,122,26,.22),transparent 55%),
+      var(--abismo);}
+  .hero .wrap{position:relative;z-index:3;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:88px}
+  .hero-mesh{position:absolute;inset:0;z-index:1;opacity:.55;mask-image:linear-gradient(to bottom,#000 30%,transparent 100%)}
+  .h-eyebrow{color:var(--dourado);display:inline-flex;align-items:center;gap:10px;margin-bottom:22px}
+  .h-eyebrow::before{content:"";width:30px;height:1px;background:var(--dourado)}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,6.6vw,5rem);font-weight:900;letter-spacing:-.02em}
+  .hero h1 em{font-style:normal;display:block;background:var(--grad-soft);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero p.lead{color:rgba(255,255,255,.74);font-size:1.12rem;max-width:33ch;margin:24px 0 34px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{display:flex;gap:26px;margin-top:38px;flex-wrap:wrap}
+  .hero-trust .ht{display:flex;flex-direction:column}
+  .hero-trust .ht b{font-family:'Archivo Expanded';color:#fff;font-size:1.5rem;font-weight:800;display:flex;align-items:center;gap:6px}
+  .hero-trust .ht span{font-family:'JetBrains Mono';color:rgba(255,255,255,.5);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+  .star{color:var(--dourado)}
+
+  /* prédio envolto em tela — SVG */
+  .tower-stage{position:relative;display:flex;justify-content:center;align-items:flex-end;min-height:440px}
+  .tower-svg{width:100%;max-width:340px;filter:drop-shadow(0 30px 60px rgba(0,0,0,.5))}
+  .scaffold{animation:sway 7s ease-in-out infinite;transform-origin:top center}
+  @keyframes sway{0%,100%{transform:skewX(0deg)}50%{transform:skewX(.5deg) translateY(2px)}}
+  /* régua de altura */
+  .floors{position:absolute;left:-6px;top:6%;bottom:8%;display:flex;flex-direction:column;justify-content:space-between;z-index:4}
+  .floors .fl{font-family:'JetBrains Mono';font-size:.6rem;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:8px;letter-spacing:.05em}
+  .floors .fl::before{content:"";width:14px;height:1px;background:rgba(255,255,255,.25)}
+  .floors .fl.on{color:var(--laranja)}
+  .floors .fl.on::before{background:var(--laranja);width:22px}
+
+  /* ---------- FAIXA SPECS ---------- */
+  .specs{background:var(--roxo-900);border-block:1px solid rgba(255,255,255,.07)}
+  .specs .wrap{display:flex;flex-wrap:wrap;gap:10px 50px;justify-content:space-between;padding-block:22px}
+  .spec{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.85)}
+  .spec svg{flex:none;color:var(--laranja)}
+  .spec b{font-weight:700;font-size:.95rem;color:#fff}
+  .spec span{font-family:'JetBrains Mono';font-size:.66rem;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;display:block}
+
+  /* ---------- SEÇÕES CLARAS ---------- */
+  .light{background:var(--concreto);color:var(--tinta)}
+  .light.mesh{background-color:var(--concreto)}
+  section.pad{padding-block:96px}
+  .sec-head{max-width:600px;margin-bottom:54px}
+  .sec-head .eyebrow{color:var(--roxo-700)}
+  .sec-head h2{font-size:clamp(2rem,4.4vw,3.1rem);font-weight:800;margin-top:16px;color:var(--tinta)}
+  .sec-head p{margin-top:18px;color:#534a60;font-size:1.06rem}
+
+  /* O QUE É — split */
+  .define{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .define-card{background:var(--abismo);border-radius:4px;padding:42px;color:#fff;position:relative;overflow:hidden}
+  .define-card .eyebrow{color:var(--dourado)}
+  .define-card h3{font-size:1.7rem;margin:14px 0 16px;color:#fff}
+  .define-card p{color:rgba(255,255,255,.72);font-size:1.02rem}
+  .define-card .dm{position:absolute;inset:0;opacity:.5;mask-image:radial-gradient(120% 120% at 100% 0,#000,transparent 60%)}
+  .define-list{list-style:none;display:flex;flex-direction:column;gap:20px}
+  .define-list li{display:flex;gap:16px;align-items:flex-start}
+  .define-list .ic{flex:none;width:44px;height:44px;border-radius:3px;background:var(--grad);display:grid;place-items:center;color:#fff}
+  .define-list h4{font-family:'Manrope';font-weight:800;font-size:1.05rem;margin-bottom:3px}
+  .define-list p{color:#5b5266;font-size:.95rem;line-height:1.5}
+
+  /* PROCESSO 01 02 03 */
+  .steps{background:var(--abismo);color:#fff;position:relative;overflow:hidden}
+  .steps .hero-mesh{opacity:.4;mask-image:linear-gradient(transparent,#000 40%,transparent)}
+  .steps .sec-head h2{color:#fff}
+  .steps .sec-head .eyebrow{color:var(--dourado)}
+  .steps .sec-head p{color:rgba(255,255,255,.6)}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);position:relative;z-index:2}
+  .step{background:var(--abismo);padding:40px 32px;transition:background .3s}
+  .step:hover{background:var(--roxo-900)}
+  .step .num{font-family:'Archivo Expanded';font-size:3.4rem;font-weight:900;line-height:1;background:var(--grad-soft);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .step h3{font-size:1.35rem;margin:18px 0 12px;color:#fff;letter-spacing:.04em}
+  .step p{color:rgba(255,255,255,.66);font-size:.96rem}
+  .step ul{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:9px}
+  .step ul li{font-family:'JetBrains Mono';font-size:.74rem;color:rgba(255,255,255,.55);letter-spacing:.04em;display:flex;gap:9px;align-items:center}
+  .step ul li::before{content:"";width:6px;height:6px;background:var(--laranja);flex:none}
+
+  /* DIFERENCIAIS */
+  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .feat{background:#fff;border:1px solid var(--concreto-esc);border-radius:4px;padding:30px 26px;transition:transform .3s var(--ease),box-shadow .3s}
+  .feat:hover{transform:translateY(-6px);box-shadow:0 22px 50px -24px rgba(77,35,120,.45)}
+  .feat .fi{width:48px;height:48px;border-radius:3px;background:linear-gradient(135deg,rgba(77,35,120,.12),rgba(255,122,26,.14));display:grid;place-items:center;color:var(--roxo-700);margin-bottom:20px}
+  .feat h3{font-family:'Manrope';font-weight:800;font-size:1.12rem;margin-bottom:8px}
+  .feat p{color:#5b5266;font-size:.92rem}
+
+  /* OBRAS / GALERIA */
+  .works{background:var(--roxo-900);color:#fff}
+  .works .sec-head h2{color:#fff}
+  .works .sec-head .eyebrow{color:var(--dourado)}
+  .works .sec-head p{color:rgba(255,255,255,.62)}
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .work{position:relative;aspect-ratio:3/4;border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:
+      linear-gradient(180deg,rgba(77,35,120,.2),rgba(20,10,36,.9)),
+      repeating-linear-gradient(0deg,rgba(255,255,255,.06) 0 1px,transparent 1px 9px),
+      repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 9px),
+      linear-gradient(120deg,#3a1c5e,#7a3a55);
+    display:flex;flex-direction:column;justify-content:flex-end;padding:22px;transition:transform .35s var(--ease)}
+  .work:hover{transform:scale(1.015)}
+  .work:hover img{transform:scale(1.06)}
+  .work img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .5s var(--ease)}
+  .work::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,transparent 35%,rgba(20,10,36,.88) 100%)}
+  .work .tag,.work h3{position:relative;z-index:3}
+  .work .tag{font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado);margin-bottom:7px}
+  .work h3{font-size:1.15rem;color:#fff}
+  .work .build{position:absolute;top:0;left:50%;transform:translateX(-50%);width:62%;height:78%;opacity:.85;z-index:1}
+  .swap-note{font-family:'JetBrains Mono';font-size:.72rem;color:rgba(255,255,255,.45);margin-top:24px;text-align:center;letter-spacing:.04em}
+
+  /* AVALIAÇÕES */
+  .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+  .review{background:#fff;border-radius:4px;padding:28px;border:1px solid var(--concreto-esc)}
+  .review .stars{color:var(--dourado);letter-spacing:3px;font-size:.95rem;margin-bottom:14px}
+  .review p{color:#3f3850;font-size:.98rem;font-style:italic}
+  .review .who{margin-top:18px;font-family:'JetBrains Mono';font-size:.7rem;letter-spacing:.08em;color:#8b8295;text-transform:uppercase}
+
+  /* FAQ */
+  .faq{max-width:820px;margin:0 auto}
+  details.q{border-top:1px solid var(--concreto-esc);padding:6px 0}
+  details.q summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;font-family:'Archivo Expanded';font-weight:700;font-size:1.12rem;color:var(--tinta)}
+  details.q summary::-webkit-details-marker{display:none}
+  details.q .plus{flex:none;width:26px;height:26px;position:relative;transition:transform .3s}
+  details.q .plus::before,details.q .plus::after{content:"";position:absolute;background:var(--laranja);inset:0;margin:auto}
+  details.q .plus::before{width:14px;height:2px}
+  details.q .plus::after{width:2px;height:14px;transition:transform .3s}
+  details.q[open] .plus::after{transform:rotate(90deg);opacity:0}
+  details.q .ans{color:#5b5266;padding:0 0 24px;font-size:1rem;max-width:68ch}
+
+  /* CTA FINAL */
+  .cta{position:relative;overflow:hidden;background:var(--grad);color:#fff;text-align:center}
+  .cta .hero-mesh{opacity:.3}
+  .cta .wrap{position:relative;z-index:2;padding-block:90px}
+  .cta .eyebrow{color:rgba(255,255,255,.85)}
+  .cta h2{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:900;margin:16px auto 22px;max-width:16ch;color:#fff}
+  .cta p{color:rgba(255,255,255,.9);max-width:46ch;margin:0 auto 36px;font-size:1.1rem}
+  .cta .hero-cta{justify-content:center}
+  .cta .btn-zap{background:#fff;color:#5b2a86}
+  .cta .btn-ghost{border-color:rgba(255,255,255,.6)}
+
+  /* FOOTER */
+  footer{background:var(--abismo);color:#fff;padding-block:62px 30px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr .9fr 1fr 1.3fr;gap:40px;padding-bottom:42px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot-grid p{color:rgba(255,255,255,.6);font-size:.95rem;margin-top:18px;max-width:34ch}
+  .foot-h{font-family:'JetBrains Mono';font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dourado);margin-bottom:20px}
+  .foot-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .foot-list a,.foot-list li{color:rgba(255,255,255,.78);font-size:.96rem;display:flex;gap:11px;align-items:flex-start;transition:color .2s}
+  .foot-list a:hover{color:var(--laranja)}
+  .foot-list svg{flex:none;color:var(--laranja);margin-top:3px}
+  .foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;color:rgba(255,255,255,.4);font-size:.82rem;font-family:'JetBrains Mono';letter-spacing:.05em}
+
+  /* WHATSAPP FLOAT */
+  .zap-float{position:fixed;right:20px;bottom:20px;z-index:80;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(37,211,102,.6);transition:transform .25s var(--ease)}
+  .zap-float:hover{transform:scale(1.08)}
+  .zap-float::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:pulse 2.4s ease-out infinite}
+  @keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- RESPONSIVO ---------- */
+  @media(max-width:920px){
+    .hero .wrap{grid-template-columns:1fr;padding-top:48px;padding-bottom:60px}
+    .tower-stage{order:-1;min-height:300px;margin-bottom:8px}
+    .tower-svg{max-width:230px}
+    .define,.feat-grid,.step-grid,.work-grid,.reviews,.foot-grid{grid-template-columns:1fr}
+    .feat-grid{grid-template-columns:1fr 1fr}
+    .step-grid{gap:1px}
+    .nav-links{display:none}
+    .nav-links.open{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--roxo-900);padding:24px;gap:18px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .burger{display:block}
+    section.pad{padding-block:68px}
+    .floors{display:none}
+  }
+  @media(max-width:560px){
+    .feat-grid{grid-template-columns:1fr}
+    .work-grid{grid-template-columns:1fr 1fr}
+    .hero-trust{gap:18px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "@id": "https://elgtelasfachadeira.com.br/#business",
+  "name": "ELG Telas Fachadeiras",
+  "alternateName": "ELG Tela Fachadeira",
+  "description": "Instalação e manutenção de telas fachadeiras para obras verticais em Curitiba e região. Proteção coletiva conforme NR-18, com equipe certificada para trabalho em altura.",
+  "url": "https://elgtelasfachadeira.com.br/",
+  "telephone": "+5541998869272",
+  "email": "comercial@elgtelasfachadeira.com.br",
+  "image": "https://elgtelasfachadeira.com.br/assets/og-image.png",
+  "logo": "https://elgtelasfachadeira.com.br/assets/favicon.svg",
+  "priceRange": "$$",
+  "currenciesAccepted": "BRL",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. Guilherme Marconcin, 2 - Uberaba",
+    "addressLocality": "Curitiba",
+    "addressRegion": "PR",
+    "postalCode": "81570-410",
+    "addressCountry": "BR"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Curitiba" },
+    { "@type": "City", "name": "São José dos Pinhais" },
+    { "@type": "City", "name": "Pinhais" },
+    { "@type": "City", "name": "Colombo" },
+    { "@type": "City", "name": "Araucária" },
+    { "@type": "AdministrativeArea", "name": "Região Metropolitana de Curitiba" }
+  ],
+  "sameAs": [ "https://www.instagram.com/elg.telasfachadeira" ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "6",
+    "bestRating": "5"
+  },
+  "knowsAbout": ["tela fachadeira", "proteção coletiva", "NR-18", "obras verticais", "trabalho em altura"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços de tela fachadeira",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instalação de tela fachadeira" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manutenção de tela fachadeira" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Projeto e dimensionamento de proteção coletiva" } }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a href="#topo" class="brand" aria-label="ELG Telas Fachadeiras">
+      <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="23" fill="#4D2378"/>
+        <path d="M11 33V21l8-6 8 6v12M19 33V25M27 33V19l7 5v9" stroke="#FF7A1A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M8 33h32" stroke="#FF7A1A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-txt"><b>ELG</b><span>TELA FACHADEIRA</span></span>
+    </a>
+    <nav class="nav-links" id="menu">
+      <a href="#oque">O que é</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#obras">Obras</a>
+      <a href="#contato" class="btn btn-zap">Pedir orçamento</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="hero-mesh mesh" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="h-eyebrow eyebrow">Telas fachadeiras · Curitiba — PR</span>
+      <h1>Segurança que sobe <em>junto com a obra</em></h1>
+      <p class="lead">Instalação e manutenção de telas fachadeiras para obras verticais. Proteção coletiva conforme a NR-18, com equipe certificada para trabalho em altura.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/5541998869272?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20de%20tela%20fachadeira." class="btn btn-zap" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.3.1.7-.1 1.2Z"/></svg>
+          Orçamento no WhatsApp
+        </a>
+        <a href="tel:+5541998869272" class="btn btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          (41) 99886-9272
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="ht"><b><span class="star">★</span> 5,0</b><span>Google · 6 avaliações</span></div>
+        <div class="ht"><b>NR-18</b><span>Proteção coletiva</span></div>
+        <div class="ht"><b>20+</b><span>Pavimentos de altura</span></div>
+      </div>
+    </div>
+
+    <div class="tower-stage">
+      <div class="floors" aria-hidden="true">
+        <div class="fl on">N20</div>
+        <div class="fl">N15</div>
+        <div class="fl on">N10</div>
+        <div class="fl">N05</div>
+        <div class="fl on">TÉRREO</div>
+      </div>
+      <svg class="tower-svg" viewBox="0 0 220 360" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="bld" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#5B2A86"/><stop offset="1" stop-color="#2A1145"/>
+          </linearGradient>
+          <pattern id="net" width="9" height="9" patternUnits="userSpaceOnUse">
+            <path d="M0 0H9M0 0V9" stroke="rgba(255,255,255,.28)" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <!-- corpo do prédio -->
+        <rect x="46" y="40" width="128" height="306" rx="3" fill="url(#bld)"/>
+        <!-- janelas -->
+        <g fill="rgba(255,176,46,.5)">
+          <rect x="60" y="58" width="22" height="16" rx="2"/><rect x="92" y="58" width="22" height="16" rx="2"/><rect x="124" y="58" width="22" height="16" rx="2"/>
+          <rect x="60" y="92" width="22" height="16" rx="2"/><rect x="92" y="92" width="22" height="16" rx="2"/><rect x="124" y="92" width="22" height="16" rx="2"/>
+          <rect x="60" y="126" width="22" height="16" rx="2"/><rect x="92" y="126" width="22" height="16" rx="2"/><rect x="124" y="126" width="22" height="16" rx="2"/>
+          <rect x="60" y="160" width="22" height="16" rx="2"/><rect x="92" y="160" width="22" height="16" rx="2"/><rect x="124" y="160" width="22" height="16" rx="2"/>
+          <rect x="60" y="194" width="22" height="16" rx="2"/><rect x="92" y="194" width="22" height="16" rx="2"/><rect x="124" y="194" width="22" height="16" rx="2"/>
+          <rect x="60" y="228" width="22" height="16" rx="2"/><rect x="92" y="228" width="22" height="16" rx="2"/><rect x="124" y="228" width="22" height="16" rx="2"/>
+          <rect x="60" y="262" width="22" height="16" rx="2"/><rect x="92" y="262" width="22" height="16" rx="2"/><rect x="124" y="262" width="22" height="16" rx="2"/>
+          <rect x="60" y="296" width="22" height="16" rx="2"/><rect x="92" y="296" width="22" height="16" rx="2"/><rect x="124" y="296" width="22" height="16" rx="2"/>
+        </g>
+        <!-- tela fachadeira (mesh) que balança -->
+        <g class="scaffold">
+          <rect x="40" y="34" width="140" height="316" rx="4" fill="url(#net)" opacity=".9"/>
+          <rect x="40" y="34" width="140" height="316" rx="4" fill="rgba(255,255,255,.05)"/>
+          <line x1="40" y1="34" x2="40" y2="350" stroke="#FF7A1A" stroke-width="2"/>
+          <line x1="180" y1="34" x2="180" y2="350" stroke="#FF7A1A" stroke-width="2"/>
+          <path d="M40 34 Q110 26 180 34" stroke="#FF7A1A" stroke-width="2" fill="none"/>
+        </g>
+        <rect x="32" y="350" width="156" height="6" rx="2" fill="#FF7A1A"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA SPECS -->
+<div class="specs">
+  <div class="wrap">
+    <div class="spec">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+      <div><b>Proteção coletiva</b><span>Conforme NR-18</span></div>
+    </div>
+    <div class="spec">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 7l10-5 10 5"/><path d="M5 9v8M19 9v8"/></svg>
+      <div><b>Obras em grandes alturas</b><span>Trabalho vertical certificado</span></div>
+    </div>
+    <div class="spec">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4 8 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01"/></svg>
+      <div><b>Curitiba e região</b><span>Atendimento local</span></div>
+    </div>
+    <div class="spec">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22a8 8 0 0 1 8-8M22 9a8 8 0 0 0-8 8M14 17a8 8 0 0 1-4-7"/><circle cx="14" cy="6" r="3"/></svg>
+      <div><b>Responsabilidade ambiental</b><span>Contenção de resíduos</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- O QUE É -->
+<section class="pad light mesh" id="oque">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">A solução em obras verticais</span>
+      <h2>O que é uma tela fachadeira</h2>
+      <p>É um sistema de proteção coletiva que envolve a fachada da edificação para conter a projeção de materiais e proteger quem está ao redor da obra — pedestres, vizinhos e a própria equipe.</p>
+    </div>
+    <div class="define">
+      <div class="define-card reveal">
+        <div class="dm mesh" aria-hidden="true"></div>
+        <span class="eyebrow">Por que é obrigatória</span>
+        <h3>Não é só tela. É a barreira que mantém a obra dentro da norma.</h3>
+        <p>A NR-18 exige proteção coletiva em obras com risco de queda de materiais. A tela fachadeira cumpre esse papel, evita acidentes no entorno e mantém o canteiro em conformidade durante toda a execução vertical.</p>
+      </div>
+      <ul class="define-list">
+        <li class="reveal">
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <div><h4>Contém a projeção de materiais</h4><p>Bloqueia a queda de detritos, ferramentas e fragmentos para fora do perímetro da obra.</p></div>
+        </li>
+        <li class="reveal">
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7 9 18l-5-5"/></svg></span>
+          <div><h4>Mantém a obra em conformidade</h4><p>Atende às exigências de proteção coletiva da NR-18, evitando multas e embargos.</p></div>
+        </li>
+        <li class="reveal">
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <div><h4>Acompanha o ritmo da obra</h4><p>Instalação e ajustes conforme a edificação sobe, sem travar o cronograma.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="pad steps" id="processo">
+  <div class="hero-mesh mesh" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Do projeto ao acompanhamento</span>
+      <h2>Como a ELG entra na sua obra</h2>
+      <p>Três etapas, um único responsável. Você fala com a gente uma vez e a tela acompanha a obra do início ao fim.</p>
+    </div>
+    <div class="step-grid">
+      <div class="step reveal">
+        <span class="num">01</span>
+        <h3>PROJETO</h3>
+        <p>Vistoria técnica e dimensionamento da proteção conforme o porte e a altura da edificação.</p>
+        <ul><li>Visita ao canteiro</li><li>Cálculo de área e ancoragem</li><li>Conformidade NR-18</li></ul>
+      </div>
+      <div class="step reveal">
+        <span class="num">02</span>
+        <h3>INSTALAÇÃO</h3>
+        <p>Equipe certificada para trabalho em altura, com EPI completo e ancoragem segura em cada pavimento.</p>
+        <ul><li>Profissionais com cinto e linha de vida</li><li>Fixação pavimento a pavimento</li><li>Execução sem parar a obra</li></ul>
+      </div>
+      <div class="step reveal">
+        <span class="num">03</span>
+        <h3>SUPORTE</h3>
+        <p>Manutenção, ajustes e reposicionamento da tela enquanto a obra avança até a entrega.</p>
+        <ul><li>Inspeção periódica</li><li>Reparos e substituições</li><li>Retirada ao fim da obra</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="pad light" id="diferenciais">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Por que a ELG</span>
+      <h2>Segurança séria, sem improviso</h2>
+      <p>Quem contrata tela fachadeira não está comprando tecido. Está comprando responsabilidade técnica em cima de uma obra de vários andares.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal">
+        <span class="fi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span>
+        <h3>Conformidade com a NR-18</h3>
+        <p>Proteção coletiva instalada dentro da norma, do laudo à execução.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="fi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/><path d="M12 14v8M9 18h6"/></svg></span>
+        <h3>Equipe para trabalho em altura</h3>
+        <p>Profissionais treinados, com cinto, linha de vida e ancoragem correta.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="fi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22a8 8 0 0 1 8-8M22 9a8 8 0 0 0-8 8"/><circle cx="14" cy="6" r="3"/></svg></span>
+        <h3>Responsabilidade ambiental</h3>
+        <p>Contenção de resíduos e proteção do entorno durante toda a obra.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="fi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 9 22 9 16 14 18 21 12 17 6 21 8 14 2 9 9 9"/></svg></span>
+        <h3>5,0 no Google</h3>
+        <p>Avaliação máxima de quem já contratou. Reputação construída em obra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OBRAS -->
+<section class="pad works" id="obras">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Obras executadas</span>
+      <h2>A tela que você vê de longe é nossa</h2>
+      <p>Empreendimentos verticais protegidos do térreo ao último pavimento em Curitiba e região.</p>
+    </div>
+    <!-- ▼ FOTOS DAS OBRAS: jogue os arquivos na pasta /fotos com estes nomes (obra-1.jpg, obra-2.jpg, obra-3.jpg).
+         Enquanto não existir o arquivo, aparece o placeholder texturizado automaticamente. -->
+    <div class="work-grid">
+      <div class="work reveal">
+        <svg class="build" viewBox="0 0 100 130" fill="none" aria-hidden="true"><rect x="20" y="10" width="60" height="118" rx="2" fill="rgba(255,255,255,.08)"/><path d="M20 10h60M20 10v118" stroke="rgba(255,255,255,.2)"/></svg>
+        <img src="fotos/obra-1.jpg" alt="Tela fachadeira instalada em torre residencial" loading="lazy" onerror="this.style.display='none'">
+        <span class="tag">Residencial · Alto padrão</span>
+        <h3>Torre de 20+ pavimentos</h3>
+      </div>
+      <div class="work reveal">
+        <svg class="build" viewBox="0 0 100 130" fill="none" aria-hidden="true"><rect x="20" y="10" width="60" height="118" rx="2" fill="rgba(255,255,255,.08)"/><path d="M20 10h60M20 10v118" stroke="rgba(255,255,255,.2)"/></svg>
+        <img src="fotos/obra-2.jpg" alt="Tela fachadeira em edifício comercial" loading="lazy" onerror="this.style.display='none'">
+        <span class="tag">Comercial · Centro</span>
+        <h3>Edifício corporativo</h3>
+      </div>
+      <div class="work reveal">
+        <svg class="build" viewBox="0 0 100 130" fill="none" aria-hidden="true"><rect x="20" y="10" width="60" height="118" rx="2" fill="rgba(255,255,255,.08)"/><path d="M20 10h60M20 10v118" stroke="rgba(255,255,255,.2)"/></svg>
+        <img src="fotos/obra-3.jpg" alt="Manutenção de tela fachadeira em altura" loading="lazy" onerror="this.style.display='none'">
+        <span class="tag">Reforma · Fachada</span>
+        <h3>Manutenção em altura</h3>
+      </div>
+    </div>
+    <p class="swap-note">// As fotos aparecem sozinhas quando você adicionar obra-1.jpg, obra-2.jpg e obra-3.jpg na pasta /fotos</p>
+
+    <!-- ▼ DEPOIMENTOS: cole aqui os textos reais das suas 6 avaliações do Google (edite o texto entre aspas e o nome em .who) -->
+    <div class="reviews">
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Equipe pontual e muito atenta à segurança. A obra não parou em nenhum momento durante a instalação."</p>
+        <div class="who">Cliente verificado · Google</div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Atendimento direto pelo WhatsApp, orçamento rápido e instalação dentro do prazo combinado."</p>
+        <div class="who">Cliente verificado · Google</div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Resolveram a proteção da fachada toda dentro da norma. Recomendo para qualquer obra vertical."</p>
+        <div class="who">Cliente verificado · Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="pad light">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-inline:auto;text-align:center">
+      <span class="eyebrow">Antes de pedir o orçamento</span>
+      <h2>Dúvidas frequentes</h2>
+    </div>
+    <div class="faq">
+      <details class="q reveal"><summary>Atende quais regiões?<span class="plus"></span></summary><div class="ans">Curitiba e região metropolitana. Se a sua obra fica perto, é só mandar a localização no WhatsApp que confirmamos o atendimento.</div></details>
+      <details class="q reveal"><summary>A instalação atende à NR-18?<span class="plus"></span></summary><div class="ans">Sim. A tela fachadeira é um sistema de proteção coletiva e instalamos dentro das exigências da norma, com equipe certificada para trabalho em altura.</div></details>
+      <details class="q reveal"><summary>Quanto tempo leva para instalar?<span class="plus"></span></summary><div class="ans">Depende da altura e da área da fachada. Após a vistoria técnica passamos o prazo exato junto com o orçamento — e a instalação é feita sem travar o andamento da obra.</div></details>
+      <details class="q reveal"><summary>Vocês fazem a manutenção durante a obra?<span class="plus"></span></summary><div class="ans">Sim. Acompanhamos a obra com inspeções, reparos e reposicionamento da tela conforme a edificação sobe, até a retirada ao fim do serviço.</div></details>
+      <details class="q reveal"><summary>Como peço um orçamento?<span class="plus"></span></summary><div class="ans">Pelo WhatsApp (41) 99886-9272. Mande o endereço da obra e, se tiver, a altura aproximada. Respondemos rápido com os próximos passos.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta" id="contato">
+  <div class="hero-mesh mesh" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow">Entre em contato e faça seu orçamento</span>
+    <h2>Sua obra protegida do térreo ao topo</h2>
+    <p>Mande o endereço e a altura da obra pelo WhatsApp. A gente cuida da segurança da fachada para você cuidar do resto.</p>
+    <div class="hero-cta">
+      <a href="https://wa.me/5541998869272?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20de%20tela%20fachadeira." class="btn btn-zap" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.3.1.7-.1 1.2Z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a href="tel:+5541998869272" class="btn btn-ghost">Ligar (41) 99886-9272</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- ÁREA DE ATENDIMENTO -->
+<section class="pad light" id="atendimento" style="padding-block:64px">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:32px">
+      <span class="eyebrow">Onde atendemos</span>
+      <h2 style="font-size:clamp(1.6rem,3.5vw,2.3rem)">Curitiba e região metropolitana</h2>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <a href="tela-fachadeira-preco-curitiba/" class="btn btn-dark" style="background:#fff;color:var(--roxo-700);border:1px solid var(--concreto-esc)">Curitiba</a>
+      <a href="tela-fachadeira-sao-jose-dos-pinhais/" class="btn btn-dark" style="background:#fff;color:var(--roxo-700);border:1px solid var(--concreto-esc)">São José dos Pinhais</a>
+      <a href="tela-fachadeira-pinhais/" class="btn btn-dark" style="background:#fff;color:var(--roxo-700);border:1px solid var(--concreto-esc)">Pinhais</a>
+      <a href="tela-fachadeira-colombo/" class="btn btn-dark" style="background:#fff;color:var(--roxo-700);border:1px solid var(--concreto-esc)">Colombo</a>
+      <a href="tela-fachadeira-araucaria/" class="btn btn-dark" style="background:#fff;color:var(--roxo-700);border:1px solid var(--concreto-esc)">Araucária</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#topo" class="brand">
+          <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="23" fill="#4D2378"/>
+            <path d="M11 33V21l8-6 8 6v12M19 33V25M27 33V19l7 5v9" stroke="#FF7A1A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            <path d="M8 33h32" stroke="#FF7A1A" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-txt"><b>ELG</b><span>TELA FACHADEIRA</span></span>
+        </a>
+        <p>Segurança para sua obra. Telas fachadeiras para obras verticais em Curitiba e região.</p>
+      </div>
+      <div>
+        <div class="foot-h">Navegue</div>
+        <ul class="foot-list">
+          <li><a href="#oque">O que é</a></li>
+          <li><a href="#processo">Como funciona</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#obras">Obras</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Saiba mais</div>
+        <ul class="foot-list">
+          <li><a href="tela-fachadeira-preco-curitiba/">Preço em Curitiba</a></li>
+          <li><a href="tela-fachadeira-nr18/">Tela fachadeira e a NR-18</a></li>
+          <li><a href="tela-fachadeira-ou-andaime-fachadeiro/">Tela x andaime fachadeiro</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Contato</div>
+        <ul class="foot-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+5541998869272">(41) 99886-9272</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg><a href="mailto:comercial@elgtelasfachadeira.com.br">comercial@elgtelasfachadeira.com.br</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg><a href="https://www.elgtelasfachadeira.com.br" target="_blank" rel="noopener">elgtelasfachadeira.com.br</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><a href="https://instagram.com/elg.telasfachadeira" target="_blank" rel="noopener">@elg.telasfachadeira</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>R. Guilherme Marconcin, 2 — Uberaba, Curitiba-PR</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 ELG Telas Fachadeiras · Curitiba — PR</span>
+      <span>Proteção coletiva · Obras verticais · NR-18</span>
+    </div>
+  </div>
+</footer>
+
+<a class="zap-float" href="https://wa.me/5541998869272?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20de%20tela%20fachadeira." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.3.1.7-.1 1.2Z"/></svg>
+</a>
+
+<script>
+  // menu mobile
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+  // reveal no scroll
+  const io=new IntersectionObserver((es)=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
