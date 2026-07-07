@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://elgtelasfachadeira.com.br/sitemap.xml
+Sitemap: https://www.elgtelasfachadeiras.com.br/sitemap.xml
